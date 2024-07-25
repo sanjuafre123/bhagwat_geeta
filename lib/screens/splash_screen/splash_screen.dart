@@ -17,6 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
         seconds: 3,
       ),
       () {
+        Navigator.of(context).pushNamed('/home');
       },
     );
     super.initState();
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
         decoration: const BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage('assets/bg.jpg'),
+            image: AssetImage('assets/bhagwat.jpg',),
           ),
         ),
       ),
