@@ -3,10 +3,6 @@ import 'package:bhagwat_geeta/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -16,11 +12,20 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) => GeetaProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => HomeScreenProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => DetailScreenProvider(),
         )
       ],
       builder: (context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
         routes: {
-          '/': (context) => const SplashScreen(),
+          '/': (context0) => const SplashScreen(),
+          '/Detail': (context0) => const DetailScreen(),
+          '/home': (context0) => const HomeScreen(),
         },
       ),
     );
