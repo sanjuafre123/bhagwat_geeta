@@ -17,7 +17,6 @@ class _SplashScreenState extends State<SplashScreen> {
         seconds: 3,
       ),
       () {
-        Navigator.of(context).pushNamed('/home');
       },
     );
     super.initState();
